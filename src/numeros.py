@@ -31,4 +31,26 @@ def convierte_binario(numero: int) -> int:
 
     return res 
 
-print(convierte_binario(0))
+def sumar_divisores_propios(numero:int) -> int:
+    if numero == 0:
+        return 0
+    
+    res = 0
+    for i in range(1, numero):
+        if numero % i == 0:
+            res += i
+    return res
+
+def clasifica_numero(numero: int) -> str:
+    suma_divisores = sumar_divisores_propios(numero)
+    if suma_divisores == numero:
+        return "Perfecto"
+    elif suma_divisores < numero:
+        return "Deficiente"
+    else:
+        return "Abundante"
+
+def clasifica_rango(numero): 
+    for i in range(1, numero + 1):
+        print(f"{i}: {clasifica_numero(i)}")
+

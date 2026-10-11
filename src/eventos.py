@@ -24,3 +24,12 @@ def es_dia_festivo(fecha: date) -> bool:
     }
     
     return (fecha.month, fecha.day) in dias_festivos
+
+def es_dia_no_laborable(fecha: date) -> bool:
+    if fecha.weekday() >= 5 or es_dia_festivo(fecha):
+        return True
+    else:
+        return False
+
+def calcular_siguiente_valida(fecha_anterior: date, intervalo_dias: int) -> date:
+    

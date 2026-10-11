@@ -45,6 +45,6 @@ def test_busca_perfecto():
     #assert resultado == 33550336
 
 #test_invierte_numero()
-#test_convierte_binario()
+test_convierte_binario()
 #test_busca_perfecto()
 print("Todas las pruebas pasaron correctamente.")
