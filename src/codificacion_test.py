@@ -1,0 +1,9 @@
+from codificacion import *
+def test_cifra_cesar():
+    print("Hola Mundo", 1) == "Ipmb Nvñep"
+    assert cifra_cesar("Hola Mundo", 13) == "Téxn YBzpé"
+    assert cifra_cesar("Hola Mundo", 66) == "Hola Mundo"
+   
+
+test_cifra_cesar()
+print("Todas las pruebas pasaron correctamente.")
