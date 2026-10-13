@@ -1,4 +1,5 @@
-from datetime import date
+from datetime import date, timedelta
+
 
 def es_dia_festivo(fecha: date) -> bool:
     """
@@ -32,4 +33,10 @@ def es_dia_no_laborable(fecha: date) -> bool:
         return False
 
 def calcular_siguiente_valida(fecha_anterior: date, intervalo_dias: int) -> date:
-    
+    fecha_anterior = fecha_anterior + timedelta(days = intervalo_dias)
+    while es_dia_no_laborable(fecha_anterior):
+        ffecha_anterior = fecha_anterior + timedelta(days = 1)
+
+    return fecha_anterior 
+
+# TODO: HACER EL ULTIMO APARTADO
